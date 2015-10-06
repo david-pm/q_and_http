@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Promises in AngularJS</title>  
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    
+    <div ng-app="app">
+      <div ng-controller="UsersController">
+         
+        <section style="float:left">
+          <div>
+           <button ng-click="getUsers()">Get User Info &raquo;</button>
+         </div>
+         
+         <ul>
+           <li ng-repeat="u in userData">{{u.username}}</li>
+         </ul>
+        </section>
+         
+        <section style="float:left">
+          <div>
+           <button ng-click="getAllUsers()">Get All User Info &raquo;</button>
+          </div>
+       
+         <div ng-repeat="au in allUsers"> <!-- <div>{{au}}</div> -->
+          <ul>
+            <li ng-repeat="user in au">{{user.username}}</li>
+          </ul>
+         </div>
+
+        </section>
+
+      </div>
+    </div>
+
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="single_usersService.js"></script>
+    <script src="multiple_usersService.js"></script>
+  </body>
+
+</html>
