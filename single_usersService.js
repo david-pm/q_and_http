@@ -17,7 +17,6 @@ angular.module('app')
           deferred.notify('DATA retrieved');
           deferred.resolve(response.data);
         }
-        
       })
       .catch(function(response) {
         deferred.reject('Failure loading users info - ERROR: ' + response.status + ' -- ' + response.statusText);
